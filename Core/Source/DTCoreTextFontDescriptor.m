@@ -577,6 +577,10 @@ static BOOL _needsChineseFontCascadeFix = NO;
 	}
 	else
 	{
+		NSLog(@"Something went wrong useFastFontCreation %@, fname %@, oName %@", (useFastFontCreation == YES) ? @"yes" : @"no", _fontName, overrideName);
+		NSLog(@"should use %@", [UIFont systemFontOfSize:_pointSize]);
+
+		NSLog(@"descriptor %@", [UIFont systemFontOfSize:_pointSize].fontDescriptor);
 		// we need to search for a suitable font
 		
 		NSDictionary *fontAttributes;
