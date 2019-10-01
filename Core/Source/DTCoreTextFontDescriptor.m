@@ -664,7 +664,8 @@ static BOOL _needsChineseFontCascadeFix = NO;
 	{
 		[_fontCache setObject:(__bridge id)(matchingFont) forKey:cacheKey];
 	}
-	
+
+	NSLog(@"%@", matchingFont);
 	return matchingFont;	// returns a +1 reference
 }
 
